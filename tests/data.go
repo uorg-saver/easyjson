@@ -6,8 +6,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/mailru/easyjson"
-	"github.com/mailru/easyjson/opt"
+	"github.com/uorg-saver/easyjson"
+	"github.com/uorg-saver/easyjson/opt"
 )
 
 type PrimitiveTypes struct {

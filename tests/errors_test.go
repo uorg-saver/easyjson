@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/mailru/easyjson/jlexer"
+	"github.com/uorg-saver/easyjson/jlexer"
 )
 
 func TestMultipleErrorsInt(t *testing.T) {
