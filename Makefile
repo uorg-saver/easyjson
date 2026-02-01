@@ -28,6 +28,7 @@ generate: build
 		./tests/type_declaration_skip.go \
 		./tests/members_escaped.go \
 		./tests/members_unescaped.go \
+		./tests/interface_type.go \
 		./tests/intern.go \
 		./tests/nocopy.go \
 		./tests/escaping.go
