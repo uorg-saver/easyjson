@@ -27,6 +27,7 @@ var snakeCase = flag.Bool("snake_case", false, "use snake_case names instead of 
 var lowerCamelCase = flag.Bool("lower_camel_case", false, "use lowerCamelCase names instead of CamelCase by default")
 var noStdMarshalers = flag.Bool("no_std_marshalers", false, "don't generate MarshalJSON/UnmarshalJSON funcs")
 var omitEmpty = flag.Bool("omit_empty", false, "omit empty fields by default")
+var omitZero = flag.Bool("omit_zero", false, "omit zero value fields by default")
 var allStructs = flag.Bool("all", false, "generate marshaler/unmarshalers for all structs in a file")
 var simpleBytes = flag.Bool("byte", false, "use simple bytes instead of Base64Bytes for slice of bytes")
 var leaveTemps = flag.Bool("leave_temps", false, "do not delete temporary files")
@@ -86,6 +87,7 @@ func generate(fname string) (err error) {
 		DisallowUnknownFields:    *disallowUnknownFields,
 		SkipMemberNameUnescaping: *skipMemberNameUnescaping,
 		OmitEmpty:                *omitEmpty,
+		OmitZero:                 *omitZero,
 		LeaveTemps:               *leaveTemps,
 		OutName:                  outName,
 		StubsOnly:                *stubs,

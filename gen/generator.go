@@ -35,6 +35,7 @@ type Generator struct {
 
 	noStdMarshalers          bool
 	omitEmpty                bool
+	omitZero                 bool
 	disallowUnknownFields    bool
 	fieldNamer               FieldNamer
 	simpleBytes              bool
@@ -131,6 +132,11 @@ func (g *Generator) OmitEmpty() {
 // SimpleBytes triggers generate output bytes as slice byte
 func (g *Generator) SimpleBytes() {
 	g.simpleBytes = true
+}
+
+// OmitZero triggers `json=",omitzero"` behaviour by default.
+func (g *Generator) OmitZero() {
+	g.omitZero = true
 }
 
 // addTypes requests to generate encoding/decoding funcs for the given type.

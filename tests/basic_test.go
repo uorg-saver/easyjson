@@ -24,8 +24,11 @@ var testCases = []struct {
 	{&namedPrimitiveTypesValue, namedPrimitiveTypesString},
 	{&structsValue, structsString},
 	{&omitEmptyValue, omitEmptyString},
+	{&omitZeroValue, omitZeroString},
+	{&omitEmptyAndZeroValue, omitEmptyAndZeroString},
 	{&snakeStructValue, snakeStructString},
 	{&omitEmptyDefaultValue, omitEmptyDefaultString},
+	{&omitZeroDefaultValue, omitZeroDefaultString},
 	{&optsValue, optsString},
 	{&rawValue, rawString},
 	{&stdMarshalerValue, stdMarshalerString},
@@ -243,7 +246,7 @@ func TestNestedMarshaler(t *testing.T) {
 		t.Errorf("Can't marshal NestedMarshaler: %s", err)
 	}
 
-	s2 := NestedMarshaler {
+	s2 := NestedMarshaler{
 		Value: &StructWithMarshaler{},
 	}
 
